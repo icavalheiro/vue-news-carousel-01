@@ -17,15 +17,12 @@
 
     <!-- Component starts here -->
     <section class="news container" v-cloak data-item-count="13" data-rtl="false">
-        <!--Replace the "v-for" and the "i" from a hardcoded value (or set in the backend) -->
         <div class="news-items-wrapper" ref="newsItemWrapper">
-            <div class="news-item"
-                v-for="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]" 
-                :key="i" 
-                :class='{animate:!swipping, "out-of-view": checkOutOfView(i)}' 
-                :style="{left: getPosition(i) + 'px', width: size + 'px'}">
+
+            <!-- News Item -->
+            <div class="news-item">
                 <div class="news-category">NEWS</div>
-                <img src="./img1.png" alt="Shake" @dragstart.prevent="">
+                <img src="./img1.png" alt="Shake">
                 <div class="news-info row">
                     <div class="news-date col-3">
                         <span class="month">
@@ -43,6 +40,197 @@
                     </div>
                 </div>
             </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-category">NEWS</div>
+                <img src="./img1.png" alt="Shake">
+                <div class="news-info row">
+                    <div class="news-date col-3">
+                        <span class="month">
+                            MAY
+                        </span>
+                        <span class="day">
+                            01
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <div class="news-text col">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                    </div>
+                </div>
+            </div>
+            <!-- /News Items -->
+
         </div>
         <div class="row slider">
             <div class="col2">PREV</div>
@@ -54,7 +242,9 @@
     </section>
     <!-- Component ends here -->
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <script src="./script.js"></script>
 </body>
 
