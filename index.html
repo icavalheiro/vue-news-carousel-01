@@ -16,10 +16,10 @@
 <body>
 
     <!-- Component starts here -->
-    <section class="news container" v-cloak data-item-count="5" data-rtl="false">
+    <section class="news container" v-cloak data-item-count="13" data-rtl="false">
         <!--Replace the "v-for" and the "i" from a hardcoded value (or set in the backend) -->
         <div class="news-item"
-            v-for="i in [0,1,2,3,4]" 
+            v-for="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]" 
             :key="i" 
             :class='{animate:!swipping, "out-of-view": checkOutOfView(i)}' 
             :style="{left: getPosition(i) + 'px', width: size + 'px'}">
@@ -41,6 +41,13 @@
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
                 </div>
             </div>
+        </div>
+        <div class="row slider">
+            <div class="col2">PREV</div>
+            <div class="col slider-body">
+                <div class="knob" :style='{left: knobPosition+"%"}'>&lt; &gt;</div>
+            </div>
+            <div class="col2">NEXT</div>
         </div>
     </section>
     <!-- Component ends here -->

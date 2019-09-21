@@ -5,7 +5,37 @@
 .news{
     overflow: hidden;
     position: relative;
-    height: 550px;
+    height: 605px;
+}
+
+.slider{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 55px;
+
+    .col2{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin: 0 40px;
+    }
+
+    .slider-body{
+        background-image: url(./line-bg.png);
+        background-repeat: repeat-x;
+
+        .knob{
+            background-color: orange;
+            width: fit-content;
+            padding: 12px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            user-select: none;
+        }
+    }
 }
 
 .news-item {

@@ -40,6 +40,21 @@ document.querySelectorAll('section.news').forEach(el => {
             },
             maxScroll() {
                 return 0;
+            },
+            knobPosition() {
+                if(this.scroll == 0) return 0;
+
+                let val = (this.scroll / this.minScroll) * 100;
+
+                if(val < 0){
+                    return 0;
+                }
+
+                if(val > 99){
+                    return 99;
+                }
+
+                return val;
             }
         },
         methods:{
