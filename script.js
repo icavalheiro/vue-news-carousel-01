@@ -12,7 +12,8 @@ document.querySelectorAll('section.news').forEach(el => {
             }
         },
         mounted() {
-            onSwipe(this.rootElement(), this.onSwipe, this.onSwipeBegin, this.onSwipeEnd);
+            onSwipe(this.$refs.newsItemWrapper, this.onSwipe, this.onSwipeBegin, this.onSwipeEnd);
+            onSwipe(this.$refs.slider, (delta) => this.onSwipe(-delta * 3), (delta) => this.onSwipeBegin(-delta * 3), (delta) => this.onSwipeEnd(-delta * 3))
 
             let defaultScroll = 0;
             if (el.getAttribute('data-rl')) {
