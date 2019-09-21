@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News section - Bahri Website</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles.scss">
+</head>
+
+<body>
+
+    <!-- Component starts here -->
+    <section class="news container" v-cloak data-item-count="5" data-rtl="false">
+        <!--Replace the "v-for" and the "i" from a hardcoded value (or set in the backend) -->
+        <div class="news-item"
+            v-for="i in [0,1,2,3,4]" 
+            :key="i" 
+            :class='{animate:!swipping, "out-of-view": checkOutOfView(i)}' 
+            :style="{left: getPosition(i) + 'px', width: size + 'px'}">
+            <div class="news-category">NEWS</div>
+            <img src="./img1.png" alt="Shake" @dragstart.prevent="">
+            <div class="news-info row">
+                <div class="news-date col-3">
+                    <span class="month">
+                        MAY
+                    </span>
+                    <span class="day">
+                        01
+                    </span>
+                    <span class="year">
+                        2019
+                    </span>
+                </div>
+                <div class="news-text col">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde earum corporis aspernatur.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Component ends here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

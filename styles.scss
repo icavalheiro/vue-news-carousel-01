@@ -1,0 +1,88 @@
+[v-cloak] {
+    display: none;
+}
+
+.news{
+    overflow: hidden;
+    position: relative;
+    height: 550px;
+}
+
+.news-item {
+    position: absolute;
+    height: 550px;
+    width: 300px;
+    user-select: none;
+
+    $opacity-trans-time: 0.3s;
+    transition: opacity $opacity-trans-time;
+
+    &.animate{
+        transition: left 0.3s;
+    }
+
+    &.out-of-view{
+        opacity: 0.6;
+        transition: opacity $opacity-trans-time;
+    }
+
+    .news-category{
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: black;
+        color: white;
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .news-info{
+        box-sizing: border-box;
+        height: 30%;
+        background-color: white;
+        padding: 30px 0;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: inset -10px 0px 23px -20px rgba(0,0,0,0.3);
+
+        .news-date{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 0;
+
+            .month{
+                font-size: 120%;
+            }
+
+            .day{
+                font-size: 250%;
+            }
+
+            .year{
+                font-size: 110%;
+            }
+
+            .month, .day, .year{
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+            }
+        }
+
+        .news-text {
+            font-size: 110%;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
