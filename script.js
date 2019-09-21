@@ -43,7 +43,7 @@ jQuery(function($){
         let size = 300;
         let itemCount = news.length;
         let contentLength = itemCount * size;
-        let knobDeltaModifier = 3;
+        let knobDeltaModifier = 2.1;
 
         let baseScroll = 0;
     
