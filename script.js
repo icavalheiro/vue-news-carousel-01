@@ -44,13 +44,13 @@ jQuery(function($){
         let section = $(this);
         let news = $(section.find('.news-item'));
         let knob = $(section.find('.knob'));
-        let rtl = true;
+        let rtl = false;
         let size = 300;
         let itemCount = news.length;
         let contentLength = itemCount * size;
         let knobDeltaModifier = 2.1;
 
-        let baseScroll =  0;
+        let baseScroll = -(size /1.5);
         if(rtl){
             baseScroll = -(contentLength - section.width());
             //news = invertArray(news);
@@ -126,6 +126,13 @@ jQuery(function($){
     
             if (baseScroll > maxScroll()) {
                 baseScroll = maxScroll()
+            }
+
+            //for mobile
+            if($(window).width() < 992){
+                //snap
+                //TODO: setar baseScroll para o valor mais proximo a deixar
+                //um elementop perfeitamente centralizado
             }
     
             updatePositions();
