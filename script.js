@@ -35,17 +35,26 @@ function addSwipeListener(element, callback, startCallback, finishCallback) {
     document.addEventListener('mouseup', handleTouchEnd, false);
 }
 
+function invertArray(array){
+    return array.reverse();
+}
+
 jQuery(function($){
     $('section.news').each(function(){
         let section = $(this);
         let news = $(section.find('.news-item'));
-        let knob = $(section.find('.knob'))
+        let knob = $(section.find('.knob'));
+        let rtl = true;
         let size = 300;
         let itemCount = news.length;
         let contentLength = itemCount * size;
         let knobDeltaModifier = 2.1;
 
-        let baseScroll = 0;
+        let baseScroll =  0;
+        if(rtl){
+            baseScroll = -(contentLength - section.width());
+            //news = invertArray(news);
+        }
     
         // Methods
         let setAnimateClass = (addClass) => {
